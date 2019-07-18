@@ -15,7 +15,7 @@ df %>%
   geom_col(position = "stack", show.legend = FALSE)+
   geom_text(aes(label = paste(expectations, round(ratio*100), "%")),  position = position_stack(vjust = 0.5), color = "white")+
   coord_flip()+
-  labs(caption = paste(length(unique(df$speaker_id)), "спикеров"),
+  labs(caption = paste(length(unique(df$speaker_id)), "спикера"),
        x = "")+
   scale_fill_hue(l=50)
 
@@ -28,7 +28,7 @@ df %>%
   geom_jitter(width = 0.02)+
   coord_flip()+
   facet_wrap(~f_id, scale = "free")+
-  labs(caption = paste(length(unique(df$speaker_id)), "спикер"),
+  labs(caption = paste(length(unique(df$speaker_id)), "спикера"),
        y = "", x = "")
   
 df %>% 
